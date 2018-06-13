@@ -1,0 +1,83 @@
+<div class="Reg">
+  <div class="container">
+    <div class="row row-centered pos">
+      <h2>Register your Profile</h2>
+      <p>After Registration,You can Edit and View your Profile. </p>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div [hidden]="submitted">
+    <form #regForm="ngForm" novalidate>
+      <div class="row">
+        <div class="form-group col-md-12">
+          <div class="form-group col-md-6">
+              <label for="firstName">First Name:</label>              
+              <input type="text" id="firstName" required style="width: 45%;" class="form-controls " [ngModel]="localUser.firstName |uppercase" (ngModelChange)="localUser.firstName=$event" name="firstName"
+              #firstName="ngModel">
+              <!-- <input [ngModel]="value | myPipe" (ngModelChange)="value=$event" name="inputField" type="text" /> -->
+            <span class="highlight"></span>
+            <span class="bar"></span>
+            <div *ngIf="firstName.errors && (firstName.dirty || firstName.touched)" class="alert alert-danger">
+              First Name Required
+            </div>
+          </div>
+        
+          <div class="form-group col-md-6">
+              <label for="lasttName">Last Name:</label>
+              
+              <input type="text" id="lastName" required style="width: 50%;" class="form-controls " [ngModel]="localUser.lastName|uppercase" (ngModelChange)="localUser.lastName=$event" name="lastName"
+              #lastName="ngModel">
+              <!-- <input [ngModel]="value | myPipe" (ngModelChange)="value=$event" name="inputField" type="text" /> -->
+            <span class="highlight"></span>
+            <span class="bar"></span>
+            <div *ngIf="lastName.errors && (lastName.dirty || lastName.touched)" class="alert alert-danger">
+              Last Name Required
+            </div>
+          </div>
+          <div class="form-group col-md-6">
+            <label for="address">Address:</label>              
+            <input type="text" id="address" required style="width: 45%;" class="form-controls " [ngModel]="localUser.address|uppercase" (ngModelChange)="localUser.address=$event" name="address"
+            #address="ngModel">
+            <!-- <input [ngModel]="value | myPipe" (ngModelChange)="value=$event" name="inputField" type="text" /> -->
+          <span class="highlight"></span>
+          <span class="bar"></span>
+          <div *ngIf="address.errors && (address.dirty || address.touched)" class="alert alert-danger">
+            Address Required
+          </div>
+        </div>
+      
+        <div class="form-group col-md-6">
+            <label for="phone">Phone Number:</label>
+            
+            <input type="text" id="phone" required style="width: 50%;" class="form-controls " [ngModel]="localUser.phone|uppercase" (ngModelChange)="localUser.phone=$event" name="phone"
+            #phone="ngModel">
+            <!-- <input [ngModel]="value | myPipe" (ngModelChange)="value=$event" name="inputField" type="text" /> -->
+          <span class="highlight"></span>
+          <span class="bar"></span>
+          <div *ngIf="phone.errors && (phone.dirty || phone.touched)" class="alert alert-danger">
+           Phone Number Required
+          </div>
+        </div>
+        <div class="form-group col-md-6">
+      <label for="pemailAdd">Email Address:</label>
+      
+        <input type="text" id="pemailAdd" style="width: 80%;" required class="form-controls" [ngModel]="localUser.email|uppercase" (ngModelChange)="localUser.email=$event" name="pemailAdd"
+        #pemailAdd="ngModel">
+      <span class="highlight"></span>
+      <span class="bar"></span>
+      <div *ngIf="pemailAdd.errors && (pemailAdd.dirty || pemailAdd.touched)" class="alert alert-danger">
+        Enter a valid Email ID
+      </div>
+      </div>
+        </div>
+      </div>
+      <div class="form-group col-md-12">
+          <div id="sub">
+              <div class="inner"><button type="submit" [disabled]="!regForm.valid"(click)="save()" class="btn btn-secondary btn-lg">Create Account</button></div>
+              <div class="inner"><button type="submit" class="btn btn-secondary btn-lg" (click)="clear()">Clear</button></div>
+            </div>
+        </div>
+    </form>
+  </div>
+</div>

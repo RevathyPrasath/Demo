@@ -1,0 +1,22 @@
+#content {
+    width: 800px;
+    height: 600px;
+    margin: 0 auto;
+    margin-top:50px;
+    background-color: #c3eeee;
+    font-family: Apple Chancery, cursive;
+    text-align: center;
+}
+h2{
+    padding: 20px;
+font-weight: bold;    
+
+}
+p{
+    font-size: 25px;
+    font-family: Apple Chancery, cursive;
+    text-align:left;
+    padding-left: 200px;
+    padding-top: 45px; 
+    /* font-weight: 50; */
+}

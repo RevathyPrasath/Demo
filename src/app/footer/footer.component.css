@@ -1,0 +1,28 @@
+.footer {
+	
+			height:80px; 
+			width: 100%; 
+			background:#00BCD5;
+            position: fixed;
+            max-width: 1200px;
+            margin: 0 auto;
+			bottom: 2pt;
+            left: 300px;
+            
+	
+	}   
+	h1,h2{
+    
+            color:white;
+            font-family: Lato;
+            font-size: 20px;
+            text-align: center;
+            /* margin-top: -50px; */
+    }
+	.footer_contents {
+	
+			height:24px;
+			width: 1000px; 
+			margin:auto;
+	
+	}
